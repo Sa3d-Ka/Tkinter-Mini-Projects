@@ -8,6 +8,9 @@ class MainApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Tic Tac Toe")
+        self.root.geometry("250x250")
+        self.root.resizable(False, False)
+
 
         # Apply a ttkbootstrap theme
         self.style = ttk.Style(theme="cosmo")  # Choose a theme: cosmo, flatly, minty, etc.
