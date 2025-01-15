@@ -10,12 +10,10 @@ A collection of small, beginner-friendly GUI projects built using Python's Tkint
 
 A classic two-player game with a simple and intuitive interface.
 
-<p align="left">
-  <img src="https://res.cloudinary.com/du0x9ut5o/image/upload/v1736965964/orte52gjbqjhf4u23ual.png" alt="Character Counter" width="400">
-</p>
-<p align="right">
-  <img src="https://res.cloudinary.com/du0x9ut5o/image/upload/v1736965964/rfzk63jzcwihmruekgyr.png" alt="Character Counter" width="400">
-</p>
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://res.cloudinary.com/du0x9ut5o/image/upload/v1736965964/orte52gjbqjhf4u23ual.png" alt="Tic-Tac-Toe Game 1" width="400">
+  <img src="https://res.cloudinary.com/du0x9ut5o/image/upload/v1736965964/rfzk63jzcwihmruekgyr.png" alt="Tic-Tac-Toe Game 2" width="400">
+</div>
 
 ---
 
@@ -53,8 +51,8 @@ A utility app that converts distances from miles to kilometers.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/tkinter-mini-projects.git
-   cd tkinter-mini-projects
+   git clone https://github.com/Sa3d-Ka/Tkinter-Mini-Projects.git
+   cd Tkinter-Mini-Project
    ```
 
 2. Navigate to a project folder and run the Python script:
