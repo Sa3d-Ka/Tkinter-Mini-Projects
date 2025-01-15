@@ -35,6 +35,16 @@ def insert_info():
     else:
         tree_view.insert("", "end", values=(nom, prenom, age, email))
 
+    # Clear the values
+    nom_input.delete(0, "end")
+    nom_input.insert(0, "Nom")
+    prenom_input.delete(0, "end")
+    prenom_input.insert(0, "Prenom")
+    age_input.delete(0, "end")
+    age_input.insert(0, "Age")
+    email_input.delete(0, "end")
+    email_input.insert(0, "E-mail")
+
 
 root = tk.Tk()
 root.title("CSV APP")
