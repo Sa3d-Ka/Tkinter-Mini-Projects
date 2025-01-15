@@ -1,9 +1,43 @@
 import tkinter as tk
 from tkinter import ttk
+from tkinter import filedialog
+from tkinter import messagebox
+from PIL import Image, ImageTk
+import csv
+
+
+
+
+def load_data():
+    file_name = filedialog.askopenfilename(
+        title="Ouvrir un fichier CSV",
+        initialdir='C:\\Users\\Sa3d ka\\Documents',
+        filetypes=[('CSV files', '*.csv')]
+    )
+
+    if file_name:
+        with open(file_name, 'r', newline="", encoding="utf-8") as file:
+            reader = csv.reader(file)
+            next(reader)
+            for row in reader:
+                nom, prenom, age, email = row
+                tree_view.insert("", "end", values=(nom, prenom, age, email))
+            messagebox.showinfo("Succes", "Ajouter avec succes")
+
+def insert_info():
+    nom = nom_input.get()
+    prenom = prenom_input.get()
+    age = age_input.get()
+    email = email_input.get()
+
+    if not nom or not prenom or not age or not email:
+        messagebox.showerror("Erreur", "Les champs sont obligatoir")
+    else:
+        tree_view.insert("", "end", values=(nom, prenom, age, email))
 
 
 root = tk.Tk()
-root.title("Forest Theme Example")
+root.title("CSV APP")
 
 style = ttk.Style(root)
 
@@ -12,6 +46,13 @@ style = ttk.Style(root)
 root.tk.call("source", r"C:\Users\Sa3d ka\Documents\Tkinter-Mini-Projects\Projects\Excel App\forest-light.tcl")
 root.tk.call("source", r"C:\Users\Sa3d ka\Documents\Tkinter-Mini-Projects\Projects\Excel App\forest-dark.tcl")
 style.theme_use("forest-dark")
+
+try:
+    icon_image = Image.open("Projects\Excel App\csvicon.png")
+    icon_photo = ImageTk.PhotoImage(icon_image)
+    root.iconphoto(True, icon_photo)
+except Exception as e:
+    print(f"Error loading icon: {e}")
 
 
 
@@ -47,7 +88,7 @@ email_input.bind("<FocusIn>", lambda e: email_input.delete(0, "end"))
 email_input.grid(row=3, column=0, sticky='ew', padx=5, pady=(0, 5))
 
 # Insert Button
-insert_button = ttk.Button(widgets_frame, text="Insert")
+insert_button = ttk.Button(widgets_frame, text="Insert", command=insert_info)
 insert_button.grid(row=4, column=0, sticky='ew', padx=5, pady=(0, 5))
 
 # Line
@@ -55,7 +96,7 @@ separator = ttk.Separator(widgets_frame)
 separator.grid(row=5, column=0, padx=10, pady=10, sticky='ew')
 
 # Import button
-import_button = ttk.Button(widgets_frame, text="Import")
+import_button = ttk.Button(widgets_frame, text="Import", command=load_data)
 import_button.grid(row=6, column=0, sticky='ew', padx=5, pady=(0, 5))
 
 # ====================================================
