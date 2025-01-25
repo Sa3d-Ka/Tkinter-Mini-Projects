@@ -125,7 +125,11 @@ tree_scroll.config(command=tree_view.yview)
 # Define column headings
 for col in cols:
     tree_view.heading(col, text=col)
-    tree_view.column(col, width=100, anchor="center")
+
+tree_view.column("Nom", width=100, anchor="center")
+tree_view.column("Prenom", width=100, anchor="center")
+tree_view.column("Age", width=50, anchor="center")
+tree_view.column("E-mail", width=150, anchor="center")
 
 tree_view.pack()
 
