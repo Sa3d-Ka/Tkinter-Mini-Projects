@@ -47,7 +47,10 @@ A powerful app to manage and visualize data from Excel and CSV files. It allows 
 
 <p align="center">
   <img src="https://res.cloudinary.com/du0x9ut5o/image/upload/v1738260191/pl222ktq3vzzmrz0u3da.png" alt="Excel/CSV App Light Mode" width="400">
+</p>
+<p align="center">
   <img src="https://res.cloudinary.com/du0x9ut5o/image/upload/v1738260191/at39t8qosgbopz17sn3z.png" alt="Excel/CSV App Dark Mode" width="400">
+
 </p>
 
 **Features**:  
