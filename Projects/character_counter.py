@@ -7,7 +7,7 @@ def counter():
     text_count = text.get("1.0", tk.END)
 
     # Count characters (including spaces and newlines)
-    character_count = len(text_count)
+    character_count = len(text_count)-1
 
     # Count words (split by whitespace and filter out empty strings)
     words = text_count.split()

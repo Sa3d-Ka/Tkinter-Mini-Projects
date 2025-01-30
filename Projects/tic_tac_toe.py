@@ -12,20 +12,17 @@ class MainApp:
         self.root.resizable(False, False)
 
 
-        # Apply a ttkbootstrap theme
-        self.style = ttk.Style(theme="cosmo")  # Choose a theme: cosmo, flatly, minty, etc.
+        self.style = ttk.Style(theme="cosmo") 
 
-        # Create a container frame to hold all pages
         self.container = ttk.Frame(root)
         self.container.pack(fill="both", expand=True)
 
-        # Create frames for each page
         self.frames = {}
         for Page in (MainPage, PlayWithFriendPage, PlayAgainstBotPage):
             page_name = Page.__name__
             frame = Page(parent=self.container, controller=self)
             self.frames[page_name] = frame
-            frame.grid(row=0, column=0, sticky="nsew")  # Place all frames in the same location
+            frame.grid(row=0, column=0, sticky="nsew")
 
         # Show the main page
         self.show_frame("MainPage")

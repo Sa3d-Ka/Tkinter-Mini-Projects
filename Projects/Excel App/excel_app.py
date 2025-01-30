@@ -10,7 +10,7 @@ import openpyxl
 def load_data():
     file_name = filedialog.askopenfilename(
         title="Ouvrir un fichier Excel",
-        initialdir=r"C:\Users\Sa3d ka\Documents",
+        initialdir=r"C:\Users\Sa3d ka\Downloads",
         filetypes=[("Excel Files CSV Files", "*.xlsx *.xls *.csv")]
     )
 
