@@ -1,3 +1,7 @@
+Here’s the updated **README.md** file with the **Excel/CSV App** added to the list of projects. I’ve integrated it seamlessly into the existing structure:
+
+---
+
 # Tkinter-Mini-Projects
 
 A collection of small, beginner-friendly GUI projects built using Python's Tkinter library. Each project demonstrates different aspects of GUI development, from basic widgets to interactive applications. Perfect for learning and practicing GUI programming in Python. Contributions are welcome!
@@ -37,6 +41,23 @@ A utility app that converts distances from miles to kilometers.
 
 ---
 
+### 4. Excel/CSV Data Manager
+
+A powerful app to manage and visualize data from Excel and CSV files. It allows users to import data, insert new records, and toggle between light and dark modes.
+
+<p align="center">
+  <img src="https://res.cloudinary.com/du0x9ut5o/image/upload/v1738260191/pl222ktq3vzzmrz0u3da.png" alt="Excel/CSV App Light Mode" width="400">
+  <img src="https://res.cloudinary.com/du0x9ut5o/image/upload/v1738260191/at39t8qosgbopz17sn3z.png" alt="Excel/CSV App Dark Mode" width="400">
+</p>
+
+**Features**:  
+- Import data from `.xlsx`, `.xls`, and `.csv` files.  
+- Insert new records manually via a form.  
+- Light and dark mode toggle for better user experience.  
+- Dynamic Treeview table to display and organize data.  
+
+---
+
 ## Features
 
 - **Beginner-Friendly**: Easy-to-understand code with comments and explanations.
@@ -59,13 +80,16 @@ A utility app that converts distances from miles to kilometers.
    ```bash
    python tic_tac_toe.py
    ```
-
 ---
 
 ## Dependencies
 
 - Python 3.x
 - Tkinter (comes pre-installed with Python)
+- Additional libraries for the Excel/CSV App:
+  ```bash
+  pip install openpyxl pillow
+  ```
 
 ---
 
